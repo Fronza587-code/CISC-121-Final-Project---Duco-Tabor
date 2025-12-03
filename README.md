@@ -20,7 +20,8 @@ The rough, non-UI based implementation of Jump Search was coded from class mater
 
 GUI Update: xxx
 
-###
+### Pattern Recognition:
+Not really applicable for deployment of Gradio apps, as very simple blocks are used.
 
 
 
