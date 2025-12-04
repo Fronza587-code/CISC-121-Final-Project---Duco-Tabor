@@ -43,6 +43,19 @@ Well, hours later, we reached a new milestone. I have now succesfully incorporat
 <img width="2861" height="1467" alt="image" src="https://github.com/user-attachments/assets/95ff5e4f-4ca6-4754-a0d1-99152f50f77d" />
 <img width="1492" height="1453" alt="image" src="https://github.com/user-attachments/assets/0167772a-49b2-4864-af9c-552463bed054" />
 
+#### GUI Update 4:
+I am going to make an actual visualisation now using gr.HighLightedText, to clearly show the jumps the algorithm makes. The input for this is list of (word, category) tuples, in which for my case the word category will be the array itself, and the category will show the indexes that need to be highlighted throughout the steps.
+
+Update 4.5:
+Okay, I am finally through. The debugging part in HighlightingGR took a lot longer than I expected, as I had to change one of the main outputs of my function to the actually Visualiser. I chose HighlightedText instead of the more complicated HTML method, as I doubt that I was going to add in major amounts of user interactivity into the HTML regardless, and the Highlighting Method is more straight-forword and easier to implement without making much of a visual difference. The Gradio website for Highlighting was not as helpful as I thought, so I needed a bit more of help from AI (ChatGPT 5) in this part, while still having 0 LINES of code written by AI itself. This might explain why my app.py is not the most clean or structured as a bot would make it.
+
+Something that was nice was that apart from the extra function, I could usually insert lines of code that worked towards the Highlighting part in sections where I had already implemented stuff for the log of the notebook. Besides this I mainly needed to change all return statements to give the correct input to the build_dgts_indxs function. 
+
+For debugging, the Hugging Face Running Log was really helpful with most fixes. If I could not determine the cause of the error myself, I often noticed that when asking ChatGPT, it would point me in the right direction of fixing the code but often suggested a solution that did not seem suitable for the project, and I often implemented a different solution. An example of this is in Line 85 of app.py, where AI seemed very set on visualising the jump values on the index of the last element in the previous block, as that is indeed the value that the algorithm compares the target to. This made the rest of the Highlighting part more complex. However, from a human perspective, the jump values themselves (step) were a lot more logical to visualise, so I implemented block_end + 1, a solution that AI disagreed with. Besides, the AI sometimes still had its occasional hallucinations. 
+
+I also changed the theme of the Blocks().
+
+
 
 
 
